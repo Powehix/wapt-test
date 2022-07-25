@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8"/>
+       <title> clock </title>
+       <link rel="stylesheet" href="styles.css" type="text/css">
+       <link rel="stylesheet" href="media.css">
+
+       <!-- подключение jQuery -->
+       <script src="lightbox/js/jquery-1.11.0.min.js"> </script>
+
+   </head>
+   <body>
+       <!-- создание холста для часов -->
+       <canvas id="canvas" width="200" height="200"> </canvas>
+
+       <script>
+           $(document).ready(function() 
+           {
+               // создание объекта холста из HTML элемента canvas
+               var canvas = $('#canvas').get(0)
+               // создание двумерного объекта рисования для холста
+               var ctx = canvas.getContext("2d");
+               // расчет радиуса часов на основании высоты холста
+               var radius = canvas.height / 2;
+               // переназначение позиции объекта рисования в центр холста
+               ctx.translate(radius, radius);
+               // уменьшение радиуса часов для их отрисовывания в пределах холста
+               radius = radius * 0.90
+               // запуск часов вызовом функции drawClock с заданным промежутком времени (1000 миллисекунд)
+               setInterval(drawClock, 1000);
+
+               // функция для отрисовывания часов
+               function drawClock() 
+               {
+                   drawFace(ctx, radius);
+                   drawNumbers(ctx, radius);
+                   drawTime(ctx, radius);
+               }
+
+               // функция для отрисовывания циферблата часов
+               function drawFace(ctx, radius) 
+               {
+                   var grad;
+
+                   // отрисовывание белого круга (задний фон)
+                   ctx.beginPath();
+                   ctx.arc(0, 0, radius, 0, 2*Math.PI);
+                   ctx.fillStyle = 'white';
+                   ctx.fill();
+
+                   // создание радиального градиента
+                   grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+                   // цвета внутренних, средних и внешних краев дуги для создания 3D эффекта
+                   grad.addColorStop(0, '#db4865');
+                   grad.addColorStop(0.5, '#f6aa32');
+                   grad.addColorStop(1, '#db4865');
+                   // задание градиента как стиля обводки объекта рисования
+                   ctx.strokeStyle = grad;
+                   // задание ширины линии объекта рисования
+                   ctx.lineWidth = radius*0.1;
+                   // отрисовывание круга
+                   ctx.stroke();
+
+                   // отрисовывание центра часов
+                   ctx.beginPath();
+                   ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+                   ctx.fillStyle = '#333';
+                   ctx.fill();
+                }
+
+              // функция для отрисовывания чисел
+              function drawNumbers(ctx, radius) 
+              {
+                  var ang;
+                  var num;
+                  // задание размера шрифта объекта рисования
+                  ctx.font = radius*0.15 + "px arial";
+                  // выравнивание текста посередине и по центру позиции для отрисовывания чисел
+                  ctx.textBaseline="middle";
+                  ctx.textAlign="center";
+
+                  // расчет позиции для отрисовывания 12 чисел
+                  for(num = 1; num < 13; num++)
+                  {
+                      ang = num * Math.PI / 6;
+                      ctx.rotate(ang);
+                      ctx.translate(0, -radius*0.85);
+                      ctx.rotate(-ang);
+                      ctx.fillText(num.toString(), 0, 0);
+                      ctx.rotate(ang);
+                      ctx.translate(0, radius*0.85);
+                      ctx.rotate(-ang);
+                    }
+                }
+
+              // функция для отрисовывания стрелок в соответствии с текущим временем
+              function drawTime(ctx, radius)
+              {
+                  // получение информации о текущем времени
+                  var now = new Date();
+                  var hour = now.getHours();
+                  var minute = now.getMinutes();
+                  var second = now.getSeconds();
+
+                  // расчет угла наклона часовой стрелки и отрисовывание ее длины и ширины (для часов)
+                  hour=hour%12;
+                  hour=(hour*Math.PI/6)+
+                  (minute*Math.PI/(6*60))+
+                  (second*Math.PI/(360*60));
+                  drawHand(ctx, hour, radius*0.5, radius*0.07);
+
+                  //расчет угла наклона часовой стрелки и отрисовывание ее длины и ширины (для минут)
+                  minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+                  drawHand(ctx, minute, radius*0.8, radius*0.07);
+
+                  // расчет угла наклона часовой стрелки и отрисовывание ее длины и ширины (для секунд)
+                  second=(second*Math.PI/30);
+                  drawHand(ctx, second, radius*0.9, radius*0.02);
+              }
+
+              // функция для отрисовывания линии заданной длины и ширины
+              function drawHand(ctx, pos, length, width) 
+              {
+                  ctx.beginPath();
+                  ctx.lineWidth = width;
+                  ctx.lineCap = "round";
+                  ctx.moveTo(0,0);
+                  ctx.rotate(pos);
+                  ctx.lineTo(0, -length);
+                  ctx.stroke();
+                  ctx.rotate(-pos);
+              }
+            })
+
+        </script>
+    </body>
+</html>   

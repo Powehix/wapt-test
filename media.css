@@ -1,0 +1,353 @@
+@media screen 
+  and (device-width: 320px) 
+  and (orientation: portrait) 
+  {
+    html
+    {
+      background-image: none;
+    }
+
+    body
+    {
+      width: 100%;
+      margin: auto;
+      border: none;
+    }
+
+    nav.menu
+    {
+      text-align: left;
+      background-color: #e46b94;
+      padding: 3%;
+    }
+
+    nav.menu li, nav.menu h4, nav.menu a
+    {
+      color: white;
+    }
+
+    nav.menu li
+    {
+      padding: 0 1.5%;
+      font-size: 3.5vw;
+      color: white;
+    }
+
+    li.icon i
+    {
+      display: initial;
+      font-size: 5vw;
+      color: white;
+    }
+
+    aside
+    {
+      display: none;
+    }
+
+    header img
+    {
+      display: none;
+    }
+
+    article.desc
+    {
+      width: 80%;
+      padding: 10%;
+      font-size: 1.2vw;
+    }
+
+    article.products
+    {
+      border-top: 1px solid #e46b94;
+    }
+
+    article.products table
+    {
+      width: 100%;
+      background-color: white;
+    }
+
+    article.products table td, article.products thead th
+    {
+      font-size: 4vw;
+      border: 0;
+    }
+
+    article.products h3
+    {
+      font-size: 1.3vw;
+    }
+
+    article.products a
+    {
+      padding: 25px;
+    }
+
+    article.info 
+    {
+      border-top: 1px solid #e46b94;
+      font-size: 4.5vw;
+    }
+
+    article.info h3
+    {
+      font-size: 1.3vw;
+    }
+
+    form
+    {
+      width: 90%;
+      font-size: 4vw;
+    }
+
+    form label
+    {
+      font-size: 4vw;
+    }
+
+    div.name input[type="text"], div.email input[type="email"]
+    {
+      padding: 5% 30%;
+    }
+
+    textarea
+    {
+      padding: 60% 25%;
+    }
+
+    form button
+    {
+      width: 50%;
+      font-size: 4vw;
+    }
+
+    footer
+    {
+      font-size: 1vw;
+    }
+
+  }
+
+@media screen 
+  and (device-width: 568px) 
+  and (orientation: landscape) 
+  {
+    html
+    {
+      background-image: none;
+    }
+
+    body
+    {
+      width: 100%;
+      margin: auto;
+      border: none;
+    }
+
+    nav.menu
+    {
+      text-align: left;
+      background-color: #e46b94;
+      padding: 3%;
+    }
+
+    nav.menu li, nav.menu h4, nav.menu a
+    {
+      color: white;
+    }
+
+    nav.menu li
+    {
+      padding: 0 1.5%;
+      font-size: 2vw;
+      color: white;
+    }
+
+    li.icon i
+    {
+      display: initial;
+      font-size: 3vw;
+      color: white;
+    }
+
+    aside
+    {
+      display: none;
+    }
+
+    header img
+    {
+      display: none;
+    }
+
+    article.desc
+    {
+      width: 80%;
+      padding: 5%;
+      font-size: 1.2vw;
+    }
+
+    article.products
+    {
+      border-top: 1px solid #e46b94;
+    }
+
+    article.products table
+    {
+      width: 100%;
+      background-color: white;
+    }
+
+    article.products table td, article.products thead th
+    {
+      font-size: 2vw;
+      border: 0;
+    }
+
+    article.products h3
+    {
+      font-size: 1.3vw;
+    }
+
+    article.products a
+    {
+      padding: 25px;
+    }
+
+    article.info 
+    {
+      border-top: 1px solid #e46b94;
+      font-size: 2.5vw;
+    }
+
+    article.info h3
+    {
+      font-size: 1.3vw;
+    }
+
+    form
+    {
+      width: 90%;
+      font-size: 2vw;
+    }
+
+    form label
+    {
+      font-size: 2vw;
+    }
+
+    div.name input[type="text"], div.email input[type="email"]
+    {
+      padding: 1.5% 10%;
+    }
+
+    textarea
+    {
+      padding: 30% 25%;
+    }
+
+    form button
+    {
+      width: 20%;
+      font-size: 2vw;
+    }
+
+    footer
+    {
+      font-size: 1vw;
+    }
+
+  }
+
+@media screen 
+  and (device-width: 960px)   
+  and (orientation: landscape) 
+  {
+    html 
+    {
+      background-image: none;
+    }
+
+    body
+    {
+      width: 100%;
+      margin: auto;
+      border: none;
+    }
+
+    nav.menu li, nav.menu h4, nav.menu a
+    {
+      font-size: 1.5vw;
+    }
+
+    li.icon i
+    {
+      display: initial;
+      font-size: 1.7vw;
+    }
+
+    aside 
+    {
+      display: none;
+    }
+
+    article.desc
+    {
+      width: 80%;
+      font-size: 1.5vw;
+    }
+
+    article.products table
+    {
+      width: 90%;
+      background-color: #ece7d4;
+    }
+
+    article.products table td, article.products thead th
+    {
+      font-size: 1.5vw;
+    }
+
+    article.info 
+    {
+      font-size: 2vw;
+    }
+
+    article.info h3
+    {
+      font-size: 1.7vw;
+    }
+
+    form
+    {
+      width: 90%;
+      font-size: 1.7vw;
+    }
+
+    form label
+    {
+      font-size: 1.5vw;
+    }
+
+    div.name input[type="text"], div.email input[type="email"]
+    {
+      padding: 1% 5%;
+    }
+
+    textarea
+    {
+      padding: 20% 25%;
+    }
+
+    form button
+    {
+      width: 20%;
+      font-size: 1.5vw;
+    }
+
+    footer
+    {
+      font-size: 1.2vw;
+    }
+  }

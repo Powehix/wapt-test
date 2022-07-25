@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8"/>
+       <title> accordion </title>
+       <link rel="stylesheet" href="styles.css" type="text/css">
+       <link rel="stylesheet" href="media.css">
+
+       <!-- подключение jQuery и стиля для оформления аккордеона -->
+       <link href="jquery-ui.css" rel="stylesheet">
+       <script src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+       <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+       <!-- включение аккордеона -->
+       <script>
+        $(function(){
+          // включение аккордеона
+          $("#accordion").accordion({
+            // секции имеют высоту, которая определяется их содержимым
+            autoHeight: false,
+            // при инициализации открывается вторая секция
+            active: 1,
+            // отключение анимации (по умолчанию - эффект скольжения)
+            animated: false
+          });
+        });
+        </script>
+   </head>
+   <body>
+     <!-- аккордеон -->
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+          <p>
+          Section 1 content
+          </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+          <p>
+          Section 2 content
+          </p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+          <p>
+          Section 3 content
+          </p>
+        </div>
+        <h3>Section 4</h3>
+        <div>
+          <p>
+          Section 4 content
+          </p>
+        </div>
+      </div>
+    </body>
+</html>   

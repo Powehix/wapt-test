@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title> amelia </title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="stylesheet" href="media.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- подключение jQuery и плагина LightBox -->
+        <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+        <script src="lightbox/js/jquery-1.11.0.min.js"> </script>
+        <script src="lightbox/js/lightbox.min.js"> </script>
+
+        <!-- подключение jQuery Validate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"> </script>
+        
+        <style>
+            footer
+            {
+               text-align: center; 
+            }
+
+            form .error 
+            {
+                color: #ff0000;
+            }
+        </style>
+        <script>
+        //функция валидации
+        $(function() {
+            // инициализация валидации формы под именем 'review'
+            $("form[name='review']").validate({
+                // определение правил валидации
+                rules: 
+                {
+                    name: 
+                    {
+                        //обязательно к заполнению
+                        required: true,
+                        // минимальное количество символов - 3
+                        minlength: 3,
+                        // максимальное количество символов - 30
+                        maxlength: 30,
+                    },
+
+                    email: 
+                    {
+                        required: true,
+                        // Поле будет валидировано по правилам e-mail
+                        email: true,
+                    },
+
+                    message: "required",
+
+                    password: 
+                    {
+                        required: true,
+                        minlength: 8,
+                    },
+
+                    date: "required",
+                },
+
+                // сообщения при ошибке валидации
+                messages: 
+                {
+                    required: "This field is required",
+                    name: 
+                    {
+                        minlength: "Please enter at least 3 characters",
+                        maxlength: "Please enter no more than 30 characters",
+                    },
+
+                    email: 
+                    {
+                        email: "Please enter a valid email address in the format of name@domain.com"
+                    },
+
+                    password: 
+                    {
+                        minlength: "Please enter at least 8 characters", 
+                    },
+                },
+
+                //отправление содержимого формы
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <ul>
+                    <li> <h4> <a href="pg2.html"> ABOUT US  </a> </h4> </li>
+                    <li> <h4> <a href="pg3.html"> PRODUCTS </a> </h4> </li>
+                    <li> <h4> <a href="pg4.html"> CONTACTS </a> </h4> </li>
+                    <li class="icon"> <a href="search.html"> <i class="fa fa-search"> </i> </a> </li>
+                    <li class="icon"> <a href="orders.html"> <i class="fa fa-shopping-cart"> </i> </a> </li>
+                </ul>
+                <aside>
+                    <input type="search" placeholder="Search...">
+                </aside> 
+            </nav>
+            <img src="images/logo.png" alt="logo">
+            </header>
+            <main>
+                <article class="desc">
+                    <h2> <span style="color: #cd9838"> W</span>elcome! </h2>
+                    <section>
+                        <h4> We are a flower store. </h4>
+                        <p> In our assortment there are unique compositions created by 
+                        professional florists. We offer a variety of choices for all tastes, 
+                        as well as compose compositions at the discretion of the customer. </p>
+                    </section>
+                </article>
+                <article class="products">
+                    <h3> See our products below: </h3>
+                        <table>
+                            <colgroup>
+                                <col span="3" style="background-color: white;">
+                            </colgroup>
+                            <thead>
+                                    <tr> 
+                                        <!-- imagegroup в data-lightbox используется для создания группы изображений, data-title для установления заголовков изображений -->
+                                        <th> <a href="images/ex1-zoom.png" data-lightbox="imagegroup" data-title="Spring Morning"> <img src="images/ex1.jpg" alt="example1"> </a> <p> Spring Morning </p> <b> 46.89 € </b> </th>
+                                        <th> <a href="images/ex2-zoom.png" data-lightbox="imagegroup" data-title="Romantic Mood"> <img src="images/ex2.jpg" alt="example2"> </a> <p> Romantic Mood </p> <b> 54.52 € </b> </th>
+                                        <th> <a href="images/ex3-zoom.png" data-lightbox="imagegroup" data-title="Flower Heart"> <img src="images/ex3.jpg" alt="example3"> </a> <p> Flower Heart </p> <b> 32.76 € </b> </th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <a href="images/ex4-zoom.png" data-lightbox="imagegroup" data-title="Crimson Surprise"> <img src="images/ex4.jpg" alt="example4"> </a> <p> Crimson Surprise </p> <b> 34.65 € </b> </td>
+                                    <td> <a href="images/ex5-zoom.png" data-lightbox="imagegroup" data-title="Sunny Day"> <img src="images/ex5.jpg" alt="example5"> </a> <p> Sunny Day </p> <b> 47.28 € </b> </td>
+                                    <td> <a href="images/ex6-zoom.png" data-lightbox="imagegroup" data-title="A Dream in a Summer Night"> <img src="images/ex6.jpg" alt="example6"> </a> <p> A Dream in a Summer Night </p> <b> 45.18 € </b> </td>
+                                </tr>
+                            </tbody>
+                            <tfoot> 
+                                <tr>
+                                    <td> <a href="images/ex7-zoom.png" data-lightbox="imagegroup" data-title="Forest Fairy Tale"> <img src="images/ex7.jpg" alt="example7"> </a> <p> Forest Fairy Tale </p> <b> 43.95 € </b> </td>
+                                    <td> <a href="images/ex8-zoom.png" data-lightbox="imagegroup" data-title="Bouquet of Red Roses"> <img src="images/ex8.jpg" alt="example8"> </a> <p> Bouquet of Red Roses </p> <b> 32.59 € </b> </td>
+                                    <td> <a href="images/ex9-zoom.png" data-lightbox="imagegroup" data-title="Gift Set"> <img src="images/ex9.jpg" alt="example9"> </a> <p> Gift Set </p> <b> 45.83 € </b> </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                </article>
+                <article class="info">
+                    <h3> Write us a message</h3>
+                    <section>
+                        <h5> If you have any questions or wishes, please fill out the form below: </h5>
+                        <form method="post" name="review">
+                            <fieldset>
+                                <legend> Form </legend>
+                                <div class="name"> 
+                                    <label for="name"> Name </label>
+                                    <input type="text" name="name" id="name" placeholder="Anastasija Mezale">
+                                </div>
+                                <div class="email">
+                                    <label for="email"> E-mail </label>
+                                    <input type="email" name="email" id="email" placeholder="mezhalee@gmail.com">
+                                </div>
+                                <div class="message">
+                                    <label for="message"> Your message </label>
+                                    <textarea name="message" id="message"> </textarea>
+                                </div>
+                                <p> Additional fields (for 3lab) </p>
+                                <div class="password">
+                                    <label for="password"> Password </label>
+                                    <input type="password" name="password" id="password" placeholder="Ana&010100">
+                                </div>
+                                <div class="date">
+                                    <label for="date"> Date </label>
+                                    <input type="date" name="date" id="date">
+                                </div>
+                                <button type="submit"> Submit </button>
+                        </fieldset>
+                        </form>
+                        <h3 class="end"> Thank you! </h3>
+                    </section>
+                </article>
+            </main>
+            <footer>
+                <a href="calculator.html"> Calculator </a> <br>
+                <a href="accordion.html"> Accordion </a>
+                 <p> <em> +371 283 099 93 </em> <br>
+                    Riga, Maza Zolitudes iela 14a, LV-1029 <br>
+                 © 2021 - AMELIA.LV </p>
+            </footer>
+    </body>
+</html>

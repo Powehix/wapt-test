@@ -1,0 +1,252 @@
+html
+{
+    background-image:url("images/bck2.jpg");
+    /* background-size: auto; */
+    /* background-size: contain; */
+    background-attachment:fixed;
+}
+ 
+body
+{
+    width: 100%;
+    background-color: white;
+    border-right: 4px double #cd9838;
+    border-left: 4px double #cd9838;
+}
+ 
+body
+{
+    /* position: relative; */
+    width: 60%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header
+{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+            
+nav.menu
+{
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    padding: 1%;
+    width: auto;
+}
+
+nav.menu li, nav.menu h4, nav.menu a
+{
+    position:relative;
+    display: inline;
+    text-decoration: none;
+    color:black;
+    padding: 4px;
+}
+
+nav.menu a
+{
+    width: 10%;
+}
+
+li.icon i
+{
+    display: none;
+}
+
+header p
+{
+    text-align: center;
+}
+
+header img
+{
+    width: 25%;
+    margin-right: auto;
+}
+
+header a:hover
+{
+    color: #cd9838;
+}
+
+header img
+{
+    display: block;
+    margin: auto;
+}
+
+article.desc
+{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+article.desc section h4
+{
+    font-weight: normal;
+}
+
+article.products
+{
+    width: 100%;
+}
+
+article.products table
+{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    border-spacing: 20px;
+    table-layout:fixed;
+    background-color: #ece7d4;
+}
+
+article.products table td, article.products thead th
+{
+    text-align: center;
+    margin-right: 5px;
+    padding: 20px;
+    border: 4px double #cd9838;
+    border-color: #cd9838;
+}
+
+article.products table img
+{
+    width: 100%;
+}
+
+article.products thead th
+{
+    font-weight: normal;
+}
+
+article.products h3
+{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+aside
+{
+    width: 30%;
+    position: relative;
+    margin: auto;
+}
+
+aside input[type="search"]
+{
+    padding: 2% 2%;
+    border: 3px double #cd9838;
+} 
+
+aside input:focus
+{
+    outline: none;
+    box-shadow: 0px 0px 10px #e0b564; 
+} 
+
+article.info
+{
+    width: 100%;
+}
+
+article.info h3
+{
+    text-align: center;
+    margin-top: 5%;
+}
+
+h3.end
+{
+    font-weight: normal;
+}
+
+article.info h5
+{
+    font-weight: normal;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+form 
+{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    color: #7b7b7b; 
+}
+
+fieldset
+{
+    border:3px double #cd9838;
+}
+
+form div
+{
+    margin-bottom: 2%;
+
+}
+
+form label, form span 
+{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2%;
+}
+
+div.name input[name="name"], div.email input[name="email"], div.password input[name="password"], div.date input[name="date"]
+{
+    padding: 2% 5%;
+    border-width: 0;
+    background: #e6e6e6;
+    outline: none;
+}
+
+div.name input[name="name"]:invalid, div.email input[name="email"]:invalid, div.password input[name="password"]:invalid, div.date input[name="date"]:invalid
+{
+    color: black;
+}
+
+textarea
+{
+    width: 50%;
+    padding: 20% 25%;
+    border-width: 0;
+    background: #e6e6e6;
+    outline: none;
+    margin: 0;
+    resize: none;
+}
+
+textarea:invalid
+{
+    color: black;
+}
+
+form button 
+{
+    padding: 10px 0px;
+    border-width: 0;
+    width: 120px;
+    margin: 0px auto 0;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 4px double #cd9838;
+    border-color: #cd9838;
+    font-size: 14px;
+    outline: none;
+}
+
+footer
+{
+    width: 100%;
+    font-size: 14px;
+}
